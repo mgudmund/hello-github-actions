@@ -21,7 +21,7 @@ jobs:
   run-image:
     name: run-image
     runs-on: ubuntu:latest 
-    needs: [login]
+    needs: ["login"]
     steps:
     - uses: docker://mgudmund/sample:latest
       env:
