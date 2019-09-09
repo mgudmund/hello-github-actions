@@ -10,3 +10,6 @@ jobs:
     - uses: ./action-a
       env:
         MY_NAME: "Martin"
+    - uses: docker://mgudmund/sample:latest
+      env:
+        MY_NAME: "Martin"
