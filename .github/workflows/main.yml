@@ -16,6 +16,7 @@ jobs:
         DOCKER_PASSWORD: "senapgbg01"
         DOCKER_USERNAME: "mgudmund"
     - uses: docker://mgudmund/sample:latest
+      needs: "login"
       env:
         MY_NAME: "Martin"
-      needs: "login"
+      
