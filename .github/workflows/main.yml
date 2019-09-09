@@ -15,13 +15,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:  
     - uses: actions/docker/login@master
-      name: "login"
       env:
         DOCKER_PASSWORD: "senapgbg01"
         DOCKER_USERNAME: "mgudmund"
    run:
     name: run
     runs-on: ubuntu:latest 
+    steps:
     - uses: docker://mgudmund/sample:latest
       env:
         MY_NAME: "Martin"
