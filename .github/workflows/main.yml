@@ -10,6 +10,10 @@ jobs:
     - uses: ./action-a
       env:
         MY_NAME: "Martin"
+    - uses: actions/docker/login@master
+      env:
+        DOCKER_PASSWORD: "senapgbg01"
+        DOCKER_USERNAME: "mgudmund"
     - uses: docker://mgudmund/sample:latest
       env:
         MY_NAME: "Martin"
