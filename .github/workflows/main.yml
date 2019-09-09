@@ -10,13 +10,19 @@ jobs:
     - uses: ./action-a
       env:
         MY_NAME: "Martin"
+  login:
+    name: login
+    runs-on: ubuntu-latest
+    steps:  
     - uses: actions/docker/login@master
       name: "login"
       env:
         DOCKER_PASSWORD: "senapgbg01"
         DOCKER_USERNAME: "mgudmund"
+   run:
+    name: run
+    runs-on: ubuntu:latest 
     - uses: docker://mgudmund/sample:latest
-      needs: "login"
       env:
         MY_NAME: "Martin"
       
